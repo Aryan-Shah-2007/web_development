@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+
+    <style>
+        input {
+            padding: 5px 10px;
+        }
+
+        #customer_name {
+            background-color: red;
+            color: white;
+        }
+
+        input[type='submit'] {
+            background-color: green;
+            color:white;    
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="customer_name">Customer Name</label>
+        <input type="text" name="customer_name" id="customer_name"><br/>
+        <label for="customer_age">Customer Age</label>
+        <input type="number" name="customer_age" id="customer_age"><br/>
+
+         <input type="radio" name="rating" id="good" value="good">
+         <label for="good">Good</label>
+         <input type="radio" name="rating" id="moderate" value="moderate">
+         <label for="moderate">Moderate</label>
+         <input type="radio" name="rating" id="bad" value="bad">
+         <label for="bad">Bad</label><br/>
+
+        <input type="submit" value="Submit Customer Info.">
+    </form>
+</body>
+</html>

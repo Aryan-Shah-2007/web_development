@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Website layout with Gird</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0; 
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+
+            grid-template-rows: 20% 70% 10%;
+            grid-template-columns: 70% 30%;
+
+            grid-template-areas: 
+            "header header"
+            "content sidebar"
+            "footer footer";
+        }
+
+        .header {
+            background-color: rgb(13, 180, 13);
+            grid-area: header;
+        }
+
+        .content {
+            background-color: green;
+            grid-area: content;
+        }
+
+        .sidebar {
+            background-color: greenyellow;
+            grid-area: sidebar;
+        }
+
+        .footer {
+            background-color: darkgreen;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="content">content</div>
+        <div class="sidebar">sidebar</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

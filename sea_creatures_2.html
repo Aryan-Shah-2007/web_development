@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <title> Sea Creatures</title>
+    <style>
+        .container {
+            height: 100vh;
+            display: grid;
+
+            grid-template-rows: 20% 70% 10%;
+            grid-template-columns: 20% 80%;
+
+            grid-template-areas:
+                'header header'
+                'sidebar content'
+                'footer footer';
+        }
+
+        .header {
+            background-color: gold;
+            grid-area: header;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            background-color: rgb(54, 231, 231);
+            grid-area: content;
+            padding: 2.5%;
+            height: 100%;
+        }
+
+        .sidebar {
+            background-color: blue;
+            grid-area: sidebar;
+        }
+
+        .footer {
+            background-color: darkblue;
+            grid-area: footer;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+
+        .nav {
+            margin: 10px;
+        }
+
+        .creature {
+            width: 33.3%;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navigation {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .seacreatures {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin-top: 4%;
+        }
+
+        .octopus {
+            background: url(https://images.pexels.com/photos/3046629/pexels-photo-3046629.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500) no-repeat center center/cover;
+        }
+
+        .jelly_fish {
+            background: url(https://images.pexels.com/photos/1854768/pexels-photo-1854768.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500) no-repeat center center/cover;
+        }
+
+        .sea_turtle {
+            background: url(https://images.pexels.com/photos/5967799/pexels-photo-5967799.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500) no-repeat center center/cover;
+        }
+
+        .creature p{
+            margin-top: 100%;
+            color: white;
+            font-weight: bold;
+            background-color: black;
+            border-radius: 10px;
+            padding: 5pxs;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="heading1">
+                <h2>Sea Creatures</h2>
+            </div>
+            <div class="navigation">
+                <div class="nav"><a href="#">Home</a></div>
+                <div class="nav"><a href="#">My Favourites</a></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="seacreatures">
+                <div class='octopus creature'>
+                    <p>Octopus</p>
+                </div>
+                <div class='jelly_fish creature'>
+                    <p>Jelly Fish</p>
+                </div>
+                <div class='sea_turtle creature'>
+                    <p>Sea Turtle</p>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cumque magni ipsam maxime
+            harum doloremque fuga voluptatem voluptate optio ab nisi ut quaerat aliquid ipsa quis, iusto vero blanditiis
+            asperiores.</div>
+        <div class="footer">&copy; Aryan Shah Inc. - Penrose Learning Center</div>
+    </div>
+</body>
+
+</html>
