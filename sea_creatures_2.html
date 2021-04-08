@@ -3,11 +3,16 @@
 <head>
     <title> Sea Creatures</title>
     <style>
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0%;
+        }
         .container {
             height: 100vh;
             display: grid;
 
-            grid-template-rows: 20% 70% 10%;
+            grid-template-rows: 20% 75% 5%;
             grid-template-columns: 20% 80%;
 
             grid-template-areas:
@@ -23,6 +28,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 2.5%;
         }
 
         .content {
@@ -35,6 +41,8 @@
         .sidebar {
             background-color: blue;
             grid-area: sidebar;
+            padding: 2.5%;
+
         }
 
         .footer {
@@ -45,7 +53,7 @@
             justify-content: center;
             align-items: center;
         }
-    
+
 
         .nav {
             margin: 10px;
@@ -85,17 +93,43 @@
             background: url(https://images.pexels.com/photos/5967799/pexels-photo-5967799.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500) no-repeat center center/cover;
         }
 
-        .creature p{
+        .creature p {
             margin-top: 100%;
             color: white;
             font-weight: bold;
             background-color: black;
             border-radius: 10px;
-            padding: 5pxs;
+            padding: 10px 20px;
         }
 
+        .learn_more_links p {
+            color: aqua;
+        }
 
-        
+        .learn_more_links a {
+            color: white;
+        }
+
+        .learn_more_links a:hover {
+            background-color: black;
+        }
+
+        .learn_more_links a:visited {
+            background-color: green;
+        }
+
+        .subscription_form {
+            background-color: white;
+            padding: 5px 10px;
+            margin: 5px 10px;
+            border-radius: 10px;
+        }
+
+        input[type='text'], input[type='submit'], input[type='email'] {
+            width: 100%;
+            padding: 5px 7.5px;
+        }
+
     </style>
 </head>
 
@@ -123,9 +157,50 @@
                 </div>
             </div>
         </div>
-        <div class="sidebar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cumque magni ipsam maxime
-            harum doloremque fuga voluptatem voluptate optio ab nisi ut quaerat aliquid ipsa quis, iusto vero blanditiis
-            asperiores.</div>
+        <div class="sidebar">
+            <div class="sidebar_container">
+                <div class="learn_more_links">
+                    <p>Learn More About These Creatures Here:</p><br>
+                    <ul>
+                        <li>
+                            <a href = 'https://kids.nationalgeographic.com/animals/invertebrates/facts/octopus' target="_blank">Click Here to Learn More About Octopuses</a>
+                        </li>
+                        <li>
+                            <a href = 'https://kids.nationalgeographic.com/animals/invertebrates/facts/jellyfish' target="_blank">Click Here to Learn More About Jelly Fish</a>
+                        </li>
+                        <li>
+                            <a href = 'https://www.nationalgeographic.com/animals/reptiles/facts/sea-turtles' target="_blank">Click Here to Learn More About Sea Turtles</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subscription_form">
+                    <form action='#'>
+                        <label for='customer_name'>Customer Name</label>
+                        <input type='text' name='name' id='customer_name'><br>
+                        <label for='email'>Customer Email</label>
+                        <input type='email' name='email' id='email'><br>
+
+                        <p>Please Choose When You Want to Receive Your Newsletter:
+                        </p> <br>
+
+                        <input type='radio' name='newsletter_type' id='daily' value='daily'>
+                        <label for='daily'>Daily Newsletter</label><br>
+
+                        <input type='radio' name='newsletter_type' id='weekly' value='weekly'>
+                        <label for='weekly'>Weekly Newsletter</label><br>
+
+                        <input type='radio' name='newsletter_type' id='monthly' value='monthly'>
+                        <label for='monthly'>Monthly Newsletter</label><br>
+
+                        <input type='radio' name='newsletter_type' id='annually' value='annually'>
+                        <label for='annually'>Annually Newsletter</label>
+                        <br><br>
+
+                        <input type='submit' value='Submit'>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="footer">&copy; Aryan Shah Inc. - Penrose Learning Center</div>
     </div>
 </body>
